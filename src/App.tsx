@@ -6,23 +6,25 @@ import Dashboard from "./pages/dashboard";
 import Redirect from "./pages/redirect";
 import Auth from "./pages/auth";
 import Link from "./pages/link";
+import AppLayout from "./layouts/applayout";
 
 
 function App(): JSX.Element {
 
-  return <div className="text-3xl"> Suscribe to roadsideCoder </div>;
+  return (
 
   <BrowserRouter>
     <Routes>
+      <Route element={<AppLayout/>}>
         <Route path="/" element= {<Landing/>}></Route>
         <Route path="/dashboard" element= {<Dashboard/>}></Route>
         <Route path="/link/:id" element= {<Link/>}></Route>
         <Route path="/:id" element= {<Redirect/>}></Route>
         <Route path="/auth" element= {<Auth/>}></Route>
-
+        </Route>
     </Routes>
   </BrowserRouter>
-  
+  );
 }
 
 export default App

@@ -1,9 +1,20 @@
+import Header from '@/components/header';
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
-const applayout = () => {
+const AppLayout = () => {
   return (
-    <div>applayout</div>
-  )
-}
+    <div>
+      <main className='min-h-screen container'>
+        <Header/>
+        <Outlet/>
+      </main>
 
-export default applayout
+      <div className='text-center p-10 bg-gray-800 mt-10'> 
+        Made with 💖 by Naina Johri
+      </div>
+    </div>
+  )
+};
+
+export default AppLayout
