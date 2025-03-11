@@ -4,17 +4,18 @@ import { Outlet } from 'react-router-dom'
 
 const AppLayout = () => {
   return (
-    <div>
-      <main className='min-h-screen container'>
-        <Header/>
-        <Outlet/>
+    <div className="min-h-screen w-full overflow-x-hidden flex flex-col">
+      <Header />
+      
+      <main className="flex-grow container mx-auto px-4">
+        <Outlet />
       </main>
 
-      <div className='text-center p-10 bg-gray-800 mt-10'> 
+      <footer className="text-center p-4 bg-gray-800 mt-10 text-white">
         Made with 💖 by Naina Johri
-      </div>
+      </footer>
     </div>
-  )
+  );
 };
 
-export default AppLayout
+export default AppLayout;
