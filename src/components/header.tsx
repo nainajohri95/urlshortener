@@ -8,7 +8,7 @@ import logo from '../assets/logo.png'
 
 const Header: React.FC = () => {
 
-    const user = true;
+    const user = false;
     const navigate = useNavigate()
 
   return (

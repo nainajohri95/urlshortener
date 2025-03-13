@@ -18,7 +18,7 @@ const Landing = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if(longUrl){
-      navigate(`/auth?${longUrl}`)
+      navigate(`/auth?createNew=${longUrl}`)
     }
   }
 
