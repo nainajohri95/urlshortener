@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                 <Button onClick={() => navigate("/auth")}> Login</Button>    
                 :(
                   <DropdownMenu>
-                  <DropdownMenuTrigger className='w-10 rounded-full overflow-hidden '>
+                  <DropdownMenuTrigger className='w-12 rounded-full overflow-hidden '>
                   <Avatar >
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>NJ</AvatarFallback>
