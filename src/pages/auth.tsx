@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Login from '@/components/ui/login';
+import Login from '@/components/login';
 import Signup from '@/components/ui/signup';
 
 
