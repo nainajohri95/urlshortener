@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Card,
   CardContent,
@@ -14,6 +14,20 @@ import Error from './error';
 
 
 const Login = () => {
+
+    const[formData, setFormData] = useState({email: "" , password: ""});
+  
+
+  const handleInputChange = (e)=>{
+    const {name, value} = e.target;
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
+
   return (
     <Card>
   <CardHeader>
@@ -23,13 +37,13 @@ const Login = () => {
   </CardHeader>
   <CardContent className='space-y-2'>
     <div className='space-y-1'>
-      <Input name='email' type='email' placeholder='Enter Email'></Input>
+      <Input name='email' type='email' placeholder='Enter Email' onChange={handleInputChange}></Input>
       <Error message={"some error"}/>
     </div>
   </CardContent>
   <CardContent className='space-y-2'>
     <div className='space-y-1'>
-      <Input name='password' type='password' placeholder='Enter Password'></Input>
+      <Input name='password' type='password' placeholder='Enter Password' onChange={handleInputChange}></Input>
       <Error message={"some error"}/>
     </div>
   </CardContent>
